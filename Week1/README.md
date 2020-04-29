@@ -34,7 +34,7 @@ Common Approches to solve "Class Imbalance" is
 - Weighted Loss : By counting the number of each labels and modifying the loss function to weighted loss with the ratio of each label 
 [WeightedLoss]
 
-- Resampling : Re-sample the dataset such that we have an equal number of normal and abnormal examples
+## Resampling : Re-sample the dataset such that we have an equal number of normal and abnormal examples
 
 You can use just standard loss function (not a weighted loss function)
 
@@ -45,7 +45,12 @@ There are many variations of Resampling
 - Oversampling the normal/abnormal case
 - Undersampling the normal/abnormal case
 
-# Binary Cross Entropy Loss Function
+For example, if you find that your training set has 70% negative examples and 30% positive
+- reweight examples in training loss
+- undersample negative examples
+- oversample positive examples
+
+## Binary Cross Entropy Loss Function
 What is "Binary Cross Entropy Loss Function?"
 [BinaryCrossEntropyLoss]
 
@@ -63,8 +68,10 @@ For Multi-Task learning, We can apply the "weighted loss" that we have covered e
 # Dataset size : Working with a Small Training Set
 "Convolutional Neural Network" is the most common and well suited architecture for processing image which require millions of examples in image classification.
 
-However, the common dataset size in medical imaging is about 10 thousand to 100 thousand.
+However, the common dataset size in medical imaging is about **10 thousand to 100 thousand.**
 
+
+## Transfer Learning
 1. Pretrain the Network
 2. Fine Tuning
 
@@ -73,12 +80,16 @@ Principle of Transfer Learning
 - the later layers of the network : High level image features / More specific to the task 
 
 How to "Transfer Learning"?
-case 1. to fine tune all of the layers
-case 2. freeze early layers and only fine-tune the later or the last layer
+￼
+나, Seungjun Lee은(는) 직접 작업하지 않은 과제를 제출하면 이 강좌에서 영구적으로 낙제 처리되거나 나의 Coursera 계정이 정지될 수 있음을 이해합니다. ￼Coursera의 명예 규율에 대하여 더 알아보기case 1. To fine tune all of the layers (For moderate or large size of dataset)
+case 2. Freeze early layers and only fine-tune the later or the last layer (For small size of dataset)
 
+Given a very large dataset, you have the option of training a new model instead of using a pre-trained model.
+
+## Data Augmentation
 Generating More Samples : Data Augmentation
-- Flipping
-- Rotation
+- Flipping (may harm the label)
+- Rotation (most commonly adopted)
 - Translation
 - Zoom
 - Change brightness or contrast
@@ -89,3 +100,34 @@ Generating More Samples : Data Augmentation
 Things to Keep in Mind when applying Data Augmentation
 1. Does the transformation will make the network generalize better?
 2. Do Augmentation Keep the Label the Same?
+
+# The problem of Random Sampling
+- The Test-set may not include disease case
+
+To get a good estimate of the performance of the model both on non-disease and disease examples,
+- sampling oreder : Test , Validation , Training
+- sample a tests tset to have at least  X % of examples of our minority class.
+- sample to have same distribution of classes as the test set. (same sampling strategy should be used)
+- Remaining patients in Training set : Since test and validation set have been artificially sampled to have a large fraction of disease examples. (In the presence of imbalance data, you can still train your model!)
+- It's bad to have patients in both training and test sets : Leaves too few images for the training set.
+
+## Ground Truth and Consensus Voting
+"How can we determine the correct label for an example?"
+
+Consensus Voting from a board of doctors
+- In medical settings, "Inter Observer Disagreement" is common.  
+- To tackle the inter observer disagreement problem, we use "Consensus Voting".
+- Use a group of human experts to determine the ground truth
+- In general, the answer will be the majority vote of the three radiologist
+- Consensus is considered less reliable than biopsy verification.  However, the limited availability of biopsy data means that consensus voting may still be the best (or only viable) option.
+
+1/1점
+## Additional Medical Testing
+Examples
+
+CT(Computerized Tomography) + X-ray scan
+- CT scan shows the 3D structure of the potential abnormality, thus giving the radiologists more information.
+-  Keep in mind that there are likely fewer data examples where patients have both the chest x-ray and an additional diagnostic test for the same disease.
+![CTconfirmation](./images/CTconfirmation.png)
+- In the dermatology study, the ground truth for the test set was determined by a skin lesion biopsy.(Biopsy : an examination of tissue removed from a living body to discover the presence, cause, or extent of a disease.)
+![confirmation2](./images/Confirmation2.png)
