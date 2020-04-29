@@ -1,4 +1,29 @@
-# Building and Training a Model for Medical Diagnosis
+# Week1 of AI for Medical Diagnosis
+Welcome to the AI for Medicine Specialization week 1 !!
+
+These courses go beyond the foundations of deep learning to teach you the nuances in applying AI to medical use cases. If you are new to deep learning or want to get a deeper foundation of how neural networks work, we recommend taking the [Deep Learning Specialization](https://www.coursera.org/specializations/deep-learning).
+
+In the first course, you learn about building machine learning models for diagnosis.
+
+In particular, you will:
+- Data preparation : Pre-process (visualization) and prepare a real-world X-ray dataset (data leakage prevention)
+- Model Development : Use Transfer Learning to retrain a DenseNet model for X-ray image classfication
+- Weighted Loss : Learn a technique to handle Class Imbalance.
+- Evaluation : Measure diagnostic performace by computing the AUC (Area Under the Curve)* for the ROC (Receiver Operating Characteristic) curve
+- Visualize model activity using GradCAMs
+
+
+# Applications of Computer vision to medical diagnosis
+
+### Medical Image Diagnosis
+
+### Eye Disease and Cancer Diagnosis
+
+### Data Exploration & Image Pre-processing
+
+# How 
+
+## Building and Training a Model for Medical Diagnosis
 
 - Definition of "Lung Mass": A lung mass is defined as an abnormal spot or area in the lungs that are more than 3 centimeters (cm), about 1.5 inches, in size. Spots smaller than 3 cm in diameter are considered lung nodules. The most common causes of a lung mass differ from that of a lung nodule, as well as the chance that the abnormality may be cancer. [[ref](https://www.verywellhealth.com/lung-mass-possible-causes-and-what-to-expect-2249388)]
 
