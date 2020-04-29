@@ -21,4 +21,4 @@ There are 3 Courses for **"AI for Medicine Specialization"** which are:
 ## 3. AI For Medical Treatment
    - Build a treatment effect predictor, apply model interpretation techniques
    - Natural language processing to extract information from radiology reports
-   - Natural language extraction can more efficiently label medical datasets.
+   - Explore how Natural language extraction can more efficiently label medical datasets.
