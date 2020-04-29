@@ -11,7 +11,7 @@ The summary here includes
 # Courses
 There are 3 Courses for **"AI for Medicine Specialization"** which are:
 
-## 1. AI for Medical Diagnosis : 
+## 1. AI for Medical Diagnosis
    - The nuances of working with 2D and 3D medical data
    - Convolutional Neural Network for diagnosis of lung disease by looking at a chest X-ray.
    - Segmentation model for detecting brain disorders.
