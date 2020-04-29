@@ -7,7 +7,7 @@ Looking at the Lungs and heart
 Even though we do not know above definition of "Lung Mass"
 
 
-# Training, prediction, and loss
+## Training, prediction, and loss
 - Training 
 During training, an algorithm is shown images of chest X-rays labeled with whether they contain a mass or not
 - Prediction
@@ -15,13 +15,11 @@ The algorithm produces an output in the form of scores, which are probabilities 
 - Loss
 From the probability score that the model predicted, we compute "Error" with the desired score.
 
-# Image Classfication and Class Imbalance
+## Image Classfication and Class Imbalance
 Three Key Challenges
 - Class Imbalance 
 - Multi-Task
-Typical Solution : Multi-Label Loss 
 - Dataset Size
-Typical Solution : Transfer Learning + Data Augmentation
 
 ## Class Imbalance Problem
 What is Class Imbalance problem?
@@ -55,7 +53,7 @@ What is "Binary Cross Entropy Loss Function?"
 [BinaryCrossEntropyLoss]
 
 
-# Multi-task challenge -> Multitask learning
+## Multi-task challenge -> Multitask learning
 Real World Problem is usually not a binary classficiation, but a  Multi-Task.
 - Mass or No Mass
 - Pneumonia or No Pneumonia
@@ -65,7 +63,7 @@ We define **"Multi-Label/Multi-Task Loss"**.
 For Multi-Task learning, We can apply the "weighted loss" that we have covered earlier.
 
 
-# Dataset size : Working with a Small Training Set
+## Dataset size : Working with a Small Training Set
 "Convolutional Neural Network" is the most common and well suited architecture for processing image which require millions of examples in image classification.
 
 However, the common dataset size in medical imaging is about **10 thousand to 100 thousand.**
@@ -80,9 +78,8 @@ Principle of Transfer Learning
 - the later layers of the network : High level image features / More specific to the task 
 
 How to "Transfer Learning"?
-￼
-나, Seungjun Lee은(는) 직접 작업하지 않은 과제를 제출하면 이 강좌에서 영구적으로 낙제 처리되거나 나의 Coursera 계정이 정지될 수 있음을 이해합니다. ￼Coursera의 명예 규율에 대하여 더 알아보기case 1. To fine tune all of the layers (For moderate or large size of dataset)
-case 2. Freeze early layers and only fine-tune the later or the last layer (For small size of dataset)
+- Case 1. To fine tune all of the layers (For moderate or large size of dataset)
+- Case 2. Freeze early layers and only fine-tune the later or the last layer (For small size of dataset)
 
 Given a very large dataset, you have the option of training a new model instead of using a pre-trained model.
 
@@ -109,8 +106,7 @@ To get a good estimate of the performance of the model both on non-disease and d
 - sample a tests tset to have at least  X % of examples of our minority class.
 - sample to have same distribution of classes as the test set. (same sampling strategy should be used)
 - Remaining patients in Training set : Since test and validation set have been artificially sampled to have a large fraction of disease examples. (In the presence of imbalance data, you can still train your model!)
-- It's bad to have patients in both training and test sets : Leaves too few images for the training set.
-
+- It's bad to have patients in both training and test sets : Overly optimistic test performace
 ## Ground Truth and Consensus Voting
 "How can we determine the correct label for an example?"
 
