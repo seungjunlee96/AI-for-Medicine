@@ -1,5 +1,5 @@
 # AI-for-Medicine
-This repository is a summary of "AI for Medicine" lecture from Deeplearning.ai 
+This repository is a summary of **"AI for Medicine Specialization"** lecture from Deeplearning.ai 
 
 Lecture Link : https://www.coursera.org/specializations/ai-for-medicine
 
