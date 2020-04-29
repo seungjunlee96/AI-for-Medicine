@@ -21,46 +21,46 @@ In particular, you will:
 
 ### Data Exploration & Image Pre-processing
 
-# How 
+# How to handle class imbalance and small training sets
+It is worth noting that our dataset contains multiple images for each patient. This could be the case, for example, when a patient has taken multiple X-ray images at different times during their hospital visits. In our data splitting, we have ensured that the split is done on the patient level so that there is no data "leakage" between the train, validation, and test datasets.
 
-## Building and Training a Model for Medical Diagnosis
+### Building and Training a Model for Medical Diagnosis
 
 - Definition of "Lung Mass": A lung mass is defined as an abnormal spot or area in the lungs that are more than 3 centimeters (cm), about 1.5 inches, in size. Spots smaller than 3 cm in diameter are considered lung nodules. The most common causes of a lung mass differ from that of a lung nodule, as well as the chance that the abnormality may be cancer. [[ref](https://www.verywellhealth.com/lung-mass-possible-causes-and-what-to-expect-2249388)]
 
 Even though we do not know above definition of "Lung Mass", we can verify whether it is normal or abnormal by inspecting a lot of examples of normal/abnormal.
 
 
-## Training, prediction, and loss
-- Training 
-During training, an algorithm is shown images of chest X-rays labeled with whether they contain a mass or not
-- Prediction
-The algorithm produces an output in the form of scores, which are probabilities that the image contains a mass.
-- Loss
-From the probability score that the model predicted, we compute "Error" with the desired score.
+### Training, prediction, and loss
+- Training : During training, an algorithm is shown images of chest X-rays labeled with whether they contain a mass or not
+- Prediction : The algorithm produces an output in the form of scores, which are probabilities that the image contains a mass.
+- Loss : From the probability score that the model predicted, we compute "Error" with the desired score.
 
-## Image Classfication and Class Imbalance
+### Image Classfication and Class Imbalance
 Three Key Challenges
 - Class Imbalance 
 - Multi-Task
 - Dataset Size
 
-## Class Imbalance Problem
+### Class Imbalance Problem
 What is Class Imbalance problem?
 In a medical dataset, it's common to have not an equal number of examples of non-disease and disease.
-- normal case > abnormal case 
+- Non-disease examples > Disease examples 
 
-[ClassImbalance]
+<p align="center"><img width="100%" src="./images/ClassImbalance.png"/></p>
 
 Common Approches to solve "Class Imbalance" is 
 - Weighted Loss : By counting the number of each labels and modifying the loss function to weighted loss with the ratio of each label 
-[WeightedLoss]
+<p align="center"><img width="50%" src="./images/WeightedLoss.png"/></p>
 
-## Resampling : Re-sample the dataset such that we have an equal number of normal and abnormal examples
 
-You can use just standard loss function (not a weighted loss function)
+### Resampling : Re-sample the dataset such that we have an equal number of normal and abnormal examples
 
-cons
-- may not be able to include all of the normal examples in re-sample data - may have more than one copy of abnormal examples which may lead to overfitting to the example
+With Resampling, you can use just standard loss function (not a weighted loss function)
+
+Things to keep in mind when applying resampling
+- may not be able to include all of the normal examples in re-sample data 
+- may have more than one copy of abnormal examples which may lead to overfitting to the example
 
 There are many variations of Resampling
 - Oversampling the normal/abnormal case
@@ -71,16 +71,19 @@ For example, if you find that your training set has 70% negative examples and 30
 - undersample negative examples
 - oversample positive examples
 
-## Binary Cross Entropy Loss Function
+### Binary Cross Entropy Loss Function
 What is "Binary Cross Entropy Loss Function?"
-[BinaryCrossEntropyLoss]
+<p align="center"><img width="50%" src="./images/BinaryCrossEntropyLoss.png"/></p>
 
 
-## Multi-task challenge -> Multitask learning
+### Multi-task challenge
 Real World Problem is usually not a binary classficiation, but a  Multi-Task.
+
+There could be various labels as below : 
 - Mass or No Mass
 - Pneumonia or No Pneumonia
 - Edema or No Edema
+- ...
 
 We define **"Multi-Label/Multi-Task Loss"**.
 For Multi-Task learning, We can apply the "weighted loss" that we have covered earlier.
@@ -140,7 +143,6 @@ Consensus Voting from a board of doctors
 - In general, the answer will be the majority vote of the three radiologist
 - Consensus is considered less reliable than biopsy verification.  However, the limited availability of biopsy data means that consensus voting may still be the best (or only viable) option.
 
-1/1점
 ## Additional Medical Testing
 Examples
 
