@@ -58,7 +58,7 @@ NPV
 - Comparable to Specificity which is P( - | normal )
 
 ## Confusion matrix
-<p align = "center"><img width = "75" src = "images/confusion matrix.png"/></p>
+<p align = "center"><img width = "75%" src = "images/confusion matrix.png"/></p>
 
 
 ## ROC curve
