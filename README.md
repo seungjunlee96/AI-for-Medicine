@@ -11,14 +11,14 @@ The summary here includes
 # Courses
 There are 3 Courses for **"AI for Medicine Specialization"** which are:
 
-## 1. AI for Medical Diagnosis
+## 1. [AI for Medical Diagnosis](https://github.com/seungjunlee96/AI-for-Medicine/tree/master/AI_for_Medical_Diagnosis)
    - The nuances of working with 2D and 3D medical data
    - Convolutional Neural Network for diagnosis of lung disease by looking at a chest X-ray.
    - Segmentation model for detecting brain disorders.
 
-First Week: You build a deep learning model that can interpret chest X-rays to classify different disease causes.<br>
-Second Week: You'll implement evaluation methodologies to assess the quality of your model.<br>
-Third Week: You use image segmentation to identify the location and boundaries of brain tumors in MRI scans.
+[Week 1](https://github.com/seungjunlee96/AI-for-Medicine/tree/master/AI_for_Medical_Diagnosis/Week1): You build a deep learning model that can interpret chest X-rays to classify different disease causes.<br>
+[Week 2](https://github.com/seungjunlee96/AI-for-Medicine/tree/master/AI_for_Medical_Diagnosis/Week2): You'll implement evaluation methodologies to assess the quality of your model.<br>
+[Week 3](https://github.com/seungjunlee96/AI-for-Medicine/tree/master/AI_for_Medical_Diagnosis/Week3): You use image segmentation to identify the location and boundaries of brain tumors in MRI scans.
 
 
 ## 2. AI for Medical Prognosis
