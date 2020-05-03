@@ -3,7 +3,7 @@ Welcome to the AI for Medicine Diagnosis week 2 !!
 
 You will learn **Evaluation metrics** to answer **"How good is a model?"**.
 
-- **Accuracy**
+- **Accuracy** 
 - **Sensitivity** (true positive rate) : How good the model is at correctly identifying those patients who actually have the disease and label them as having the disease.
 - **Specificity** (true negative rate) : How good the model is at correctly identifying the healtht patients as not having the disease.
 - **predictive values** 
@@ -14,20 +14,20 @@ You will learn **Evaluation metrics** to answer **"How good is a model?"**.
 <p align="center"><img width = "50%" src="images/sens_spec.png"/></p>
 
 ### Accuracy
-- Accuracy = Examples correctly classified / Total number of examples
+- Accuracy = Examples correctly classified / Total number of examples = ( TP + TN ) / ( TP + TN + FP + FN )
 - Accuracy = P(correct)
 - Accuracy = Sensitivity x P(disease) + Specificity x P(normal)
 - **Accuracy = Sensitivity x prevalance + Specificity x (1 - prevalance)**
 
 Note that, prevalance = P(disease) and P(disease) + P(normal) = 1
 
-### Sensitivity
+### Sensitivity (= True positive rates = Recall)
 - Sensitivity : How good the model is at correctly identifying those patients who actually have the disease and label them as having the disease.
 - Sensitivity = P(predict positive | actual positive)
 - Sensitivity = TP / (TP + FN)
 The probability of a patient having disease in a population is called the prevalance.
 
-### Specificity
+### Specificity (= True negative rates)
 - Specificity : How good the model is at correctly identifying the healtht patients as not having the disease.
 - Specificity : P(predict negative | actual negative)
 - Specificity : TN / (TN + FP)
@@ -71,4 +71,4 @@ p hat : sample accuracy
 In statistics, a confidence interval (CI) is a type of estimate computed from the statistics of the observed data. This proposes a range of plausible values for an unknown parameter (for example, the mean). The interval has an associated confidence level that the true parameter is in the proposed range. Given observations x_1,..., x_n and a confidence level, a valid confidence interval has a confidence level probability of containing the true underlying parameter. The level of confidence can be chosen by the investigator. In general terms, a confidence interval for an unknown parameter is based on sampling the distribution of a corresponding estimator.
 
 Interpretation of 95% confidence
-- In repeated sampling, this method reproduces intervals that include the population accuracy in about 95% of samples
+- In repeated sampling, this method reproduces intervals that include the population accuracy(true proportion) in about 95% of samples
