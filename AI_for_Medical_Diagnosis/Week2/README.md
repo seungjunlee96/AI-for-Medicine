@@ -1,8 +1,9 @@
 # Week2 of AI for Medical Diagnosis
 Welcome to the AI for Medicine Diagnosis week 2 !!
 
-You will learn **Evaluation metrics** to answer **"How good is a model?"**.
+By the end of this week, you will practice implementing standard evaluation metrics to see how well a model performs in diagnosing diseases.
 
+Below are the lists of you will learn in this week. 
 - **Accuracy** 
 - **Sensitivity** (true positive rate) : How good the model is at correctly identifying those patients who actually have the disease and label them as having the disease.
 - **Specificity** (true negative rate) : How good the model is at correctly identifying the healtht patients as not having the disease.
