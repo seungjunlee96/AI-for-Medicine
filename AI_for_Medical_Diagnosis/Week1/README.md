@@ -1,5 +1,5 @@
 # Week1 of AI for Medical Diagnosis
-Welcome to the AI for Medicine Specialization week 1 !!
+Welcome to the AI for Medicine Diagnosis week 1 !!
 
 These courses go beyond the foundations of deep learning to teach you the nuances in applying AI to medical use cases. If you are new to deep learning or want to get a deeper foundation of how neural networks work, we recommend taking the [Deep Learning Specialization](https://www.coursera.org/specializations/deep-learning).
 
