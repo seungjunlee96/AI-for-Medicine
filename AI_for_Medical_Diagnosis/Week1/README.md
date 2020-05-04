@@ -16,10 +16,20 @@ In particular, you will:
 # Applications of Computer vision to medical diagnosis
 
 ### Medical Image Diagnosis
-
-### Eye Disease and Cancer Diagnosis
+Examples of Medical image diagnosis
+- Dermatology(the branch of medicine dealing with the skin) and skin cancer detection
+- Ophthalmology (the diagnosis and treatment of eye disorders) [[LINK](https://www.mobihealthnews.com/content/google-researchers-use-deep-learning-detect-diabetic-retinopathy-upwards-90-percent-accuracy)]
+- Histopathology, a medical specialty involving examination of tissues under the microscope.
 
 ### Data Exploration & Image Pre-processing
+Below are the common steps to check the data before feeding into the model
+- Data types and null values check
+- Unique IDs check
+- Explore data labels
+- Investigate a single image
+- Investigate pixel value distribution
+- Standardization by subtracting the mean and dividing by the standard deviation.
+
 
 # How to handle class imbalance and small training sets
 It is worth noting that our dataset contains multiple images for each patient. This could be the case, for example, when a patient has taken multiple X-ray images at different times during their hospital visits. In our data splitting, we have ensured that the split is done on the patient level so that there is no data "leakage" between the train, validation, and test datasets.
