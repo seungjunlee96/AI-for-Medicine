@@ -1,7 +1,9 @@
 # AI-for-Medicine
-This repository is a summary of  **"AI for Medicine Specialization"**  lecture from Deeplearning.ai 
-
+Welcome to the **AI for Medicine Specialization**!!<br>
+This repository is a summary of  **"AI for Medicine Specialization"**  lecture from Deeplearning.ai<br> 
 Lecture Link : https://www.coursera.org/specializations/ai-for-medicine
+
+These courses go beyond the foundations of deep learning to teach you the nuances in applying AI to medical use cases. If you are new to deep learning or want to get a deeper foundation of how neural networks work, we recommend taking the [Deep Learning Specialization](https://www.coursera.org/specializations/deep-learning).
 
 The summary here includes 
 - Lecture Notes
