@@ -16,8 +16,6 @@ Prerequisite
 - true negative (TN): The model classifies the example as negative, and the actual label is also negative.
 - false negative (FN): The model classifies the example as negative, **but** the label is actually positive.
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}"/>
-
 ## Accuracy, Sensitivity ,and Specificity
 <p align="center"><img width = "75%" src="images/acc_sens_spec.png"/></p>
 <p align="center"><img width = "50%" src="images/sens_spec.png"/></p>
