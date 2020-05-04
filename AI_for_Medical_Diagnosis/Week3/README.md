@@ -12,8 +12,30 @@ In particular, you will:
 - Implement a proper loss function for model training (soft dice loss).
 - Evaluate model performance by calculating sensitivity and specificity.
 
+## MRI Data and Image Registration
+Compared to 2D image like X-rays, MRI sequence is a 3D volume.
+<p align = "center"><src = 'images/mri_sequences.png'/></p>
 
-##
+The key idea that we will use to combine the information from different sequences is to **treat them as different channels.**
+- Idea : RGB color channel -> Depth channel
+- You extend this idea to stacking more than just 3 channels.
+- Challenge : [Mis-alignment problem](https://en.wikipedia.org/wiki/Image_registration)
+- Preprocessing : Image Registration is the solution to the misalignment problem.
+
+Note that, most of the 3D volume data in medical setting needs preprocessing step of **image registration**.
+<p align = "center"<src = "images/image_registration.png'/></p>
+
+## Segmentation
+What is Segmentation?
+- The process of defining the boundaries of various tissues.
+- The task of determining the class of every point(in 2D : pixel, in 3D : voxel).
+
+Why 3D approach?
+- 2D lose important **3D context** when using this approach. 
+- For instance, if there is a tumor in one slice, there is likely to be a tumor in the slices right adjacent to it.
+
+Why not use whole sequence of MRI data?
+- In the 3D approach, ideally, we'd want to pass in the whole MRI volume into the segmentation model and get out a 3D segmentation map for the whole MRI. However, the size of the MRI volume makes it impossible to pass it in all at once into the model. **It would simply take too much memory and computation.** 
 
 ## Loss function for Segmentation : Soft Dice Loss
 [Dice Loss](https://en.wikipedia.org/wiki/S%C3%B8rensen%E2%80%93Dice_coefficient)
