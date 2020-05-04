@@ -14,11 +14,22 @@ In particular, you will:
 
 
 # Applications of Computer vision to medical diagnosis
+<p align="center"><img width="50%" src="./images/LungCACXR.png"></p>
+- Definition of "Lung Mass": A lung mass is defined as an abnormal spot or area in the lungs that are more than 3 centimeters (cm), about 1.5 inches, in size. Spots smaller than 3 cm in diameter are considered lung nodules. The most common causes of a lung mass differ from that of a lung nodule, as well as the chance that the abnormality may be cancer. [[ref](https://www.verywellhealth.com/lung-mass-possible-causes-and-what-to-expect-2249388)]
+
+Even though we do not know above definition of "Lung Mass", we can verify whether it is normal or abnormal by inspecting a lot of examples of normal/abnormal : This is how we teach the deep learning models.
+
+### Training, prediction, and loss
+- Training : During training, an algorithm is shown images of chest X-rays labeled with whether they contain a mass or not
+- Prediction : The algorithm produces an output in the form of scores, which are probabilities that the image contains a mass.
+- Loss : From the probability score that the model predicted, we compute "Error" with the desired score.
 
 ### Medical Image Diagnosis
 Examples of Medical image diagnosis
 - Dermatology(the branch of medicine dealing with the skin) and skin cancer detection
 - Ophthalmology (the diagnosis and treatment of eye disorders) [[LINK](https://www.mobihealthnews.com/content/google-researchers-use-deep-learning-detect-diabetic-retinopathy-upwards-90-percent-accuracy)]
+<p align="center"><img width="50%" src="./images/eye.png"></p>
+
 - Histopathology, a medical specialty involving examination of tissues under the microscope.
 
 ### Data Exploration & Image Pre-processing
@@ -35,17 +46,6 @@ Below are the common steps to check the data before feeding into the model
 It is worth noting that our dataset contains multiple images for each patient. This could be the case, for example, when a patient has taken multiple X-ray images at different times during their hospital visits. In our data splitting, we have ensured that the split is done on the patient level so that there is no data "leakage" between the train, validation, and test datasets.
 
 ### Building and Training a Model for Medical Diagnosis
-
-- Definition of "Lung Mass": A lung mass is defined as an abnormal spot or area in the lungs that are more than 3 centimeters (cm), about 1.5 inches, in size. Spots smaller than 3 cm in diameter are considered lung nodules. The most common causes of a lung mass differ from that of a lung nodule, as well as the chance that the abnormality may be cancer. [[ref](https://www.verywellhealth.com/lung-mass-possible-causes-and-what-to-expect-2249388)]
-
-Even though we do not know above definition of "Lung Mass", we can verify whether it is normal or abnormal by inspecting a lot of examples of normal/abnormal.
-
-
-### Training, prediction, and loss
-- Training : During training, an algorithm is shown images of chest X-rays labeled with whether they contain a mass or not
-- Prediction : The algorithm produces an output in the form of scores, which are probabilities that the image contains a mass.
-- Loss : From the probability score that the model predicted, we compute "Error" with the desired score.
-
 ### Image Classfication and Class Imbalance
 Three Key Challenges
 - Class Imbalance 
@@ -61,7 +61,9 @@ In a medical dataset, it's common to have not an equal number of examples of non
 
 Common Approches to solve "Class Imbalance" is 
 - Weighted Loss : By counting the number of each labels and modifying the loss function to weighted loss with the ratio of each label 
-<p align="center"><img width="50%" src="./images/WeightedLoss.png"/></p>
+<p align="center"><img width="50%" src="./images/WeightedLoss1.png"/></p>
+
+<p align="center"><img width="50%" src="./images/WeightedLoss2.png"/></p>
 
 
 ### Resampling : Re-sample the dataset such that we have an equal number of normal and abnormal examples
