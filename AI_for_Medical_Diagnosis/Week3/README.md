@@ -14,16 +14,16 @@ In particular, you will:
 
 ## MRI Data and Image Registration
 Compared to 2D image like X-rays, MRI sequence is a 3D volume.
-<p align = "center"><src = 'images/mri_sequences.png'/></p>
+<p align="center"><img width="75%" src="./images/mri_sequences.jpg"/></p>
 
 The key idea that we will use to combine the information from different sequences is to **treat them as different channels.**
 - Idea : RGB color channel -> Depth channel
 - You extend this idea to stacking more than just 3 channels.
-- Challenge : [Mis-alignment problem](https://en.wikipedia.org/wiki/Image_registration)
-- Preprocessing : Image Registration is the solution to the misalignment problem.
+- Challenge : Misalignment problem
+- Preprocessing : [image Registration](https://en.wikipedia.org/wiki/Image_registration) is the solution to the misalignment problem.
 
 Note that, most of the 3D volume data in medical setting needs preprocessing step of **image registration**.
-<p align = "center"<src = "images/image_registration.png'/></p>
+<p align="center"><image width="30%" src="images/image_registration.jpg"/></p>
 
 ## Segmentation
 What is Segmentation?
