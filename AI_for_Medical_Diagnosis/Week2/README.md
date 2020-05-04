@@ -10,6 +10,11 @@ Below are the lists of you will learn in this week.
 - **predictive values** 
 - [**ROC(Receiver operating characteristic) curve**](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)
 
+- true positive (TP): The model classifies the example as positive, and the actual label also positive.
+- false positive (FP): The model classifies the example as positive, **but** the actual label is negative.
+- true negative (TN): The model classifies the example as negative, and the actual label is also negative.
+- false negative (FN): The model classifies the example as negative, **but** the label is actually positive.
+
 ## Accuracy, Sensitivity ,and Specificity
 <p align="center"><img width = "75%" src="images/acc_sens_spec.png"/></p>
 <p align="center"><img width = "50%" src="images/sens_spec.png"/></p>
