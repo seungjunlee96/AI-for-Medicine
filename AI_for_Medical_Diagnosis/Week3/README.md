@@ -12,8 +12,22 @@ In particular, you will:
 - Implement a proper loss function for model training (soft dice loss).
 - Evaluate model performance by calculating sensitivity and specificity.
 
+<img src="https://miro.medium.com/max/2652/1*eTkBMyqdg9JodNcG_O4-Kw.jpeg" width="100%">
+
 # Explore MRI data
 ## MRI Data and Image Registration
+Magnetic resonance imaging (MRI) is an advanced imaging technique that is used to observe a variety of diseases and parts of the body.
+
+At a high level, MRI works by measuring the radio waves emitting by atoms subjected to a magnetic field. 
+
+<img src="https://miro.medium.com/max/1740/1*yC1Bt3IOzNv8Pp7t1v7F1Q.png">
+
+The MRI scan is one of the most common image modalities that we encounter in the radiology field.
+Other data modalities include:
+- Computer Tomography (CT),
+- Ultrasound
+- X-Rays.
+
 Compared to 2D image like X-rays, MRI sequence is a 3D volume.
 <p align="center"><img width="75%" src="./images/mri_sequences.jpg"/></p>
 
