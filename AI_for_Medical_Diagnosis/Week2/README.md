@@ -87,8 +87,8 @@ F1 score is the harmonic mean of the precision and recall, where an F1 score rea
 
 
 ## confidence interval
-p : population accuracy
-p hat : sample accuracy
+- p : population accuracy
+- p̂ : sample accuracy
 
 In statistics, a confidence interval (CI) is a type of estimate computed from the statistics of the observed data. This proposes a range of plausible values for an unknown parameter (for example, the mean). The interval has an associated confidence level that the true parameter is in the proposed range. Given observations x_1,..., x_n and a confidence level, a valid confidence interval has a confidence level probability of containing the true underlying parameter. The level of confidence can be chosen by the investigator. In general terms, a confidence interval for an unknown parameter is based on sampling the distribution of a corresponding estimator.
 
